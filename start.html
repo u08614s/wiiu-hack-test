@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        MCWII改造技術試験
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body text="#FFF">
+    <center>
+
+        <font size="4">
+            <br><br>
+            <div class="t1">
+                問題は全部で10問です。<br>
+                入力ボックスに解答を入力してください。<br>
+                全て解き終わったら完了ボタンを押してください。<br>
+                調べたりプログラムを試したりしてはいけません。<br>
+            </div><br><br><br>
+
+
+            【第1問】 <br>
+            Minecraft::GetInstance関数では、必ず特定のアドレスの値を戻り値として返す。<br>
+            その特定のアドレスを答えなさい。<br>
+            <input id="itimon" placeholder="解答例：0x10000000"><br><br><br>
+
+            【第2問】 <br>
+            次の5つの関数の中に、文字を描画することに関して<br>
+            呼び出す必要が全く無いものが1つあります。<br>
+            次の5つの中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="5" cols="27">ア. std::basic_string
+イ. GlStateManager::pushMatrix
+ウ. BufferBuilder::vertexUV
+エ. swprintf
+オ. GlStateManager::ortho
+	        </textarea><br>
+            <input id="nimon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第3問】 <br>
+            カフェコードで[[0x109CD8E4]+0x34]+0xA08に0x12345678を書き込むプログラムの例として<br>
+            正しいものを次の3つの中から記号で答えなさい。<br>
+            <a href="htmls/A0.html" onclick="window.open('htmls/A0.html','subwin','width=300,height=300');return false;">アのプログラム</a><br>
+            <a href="htmls/A1.html" onclick="window.open('htmls/A1.html','subwin','width=300,height=300');return false;">イのプログラム</a><br>
+            <a href="htmls/A2.html" onclick="window.open('htmls/A2.html','subwin','width=300,height=300');return false;">ウのプログラム</a><br>
+            <input id="sanmon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第4問】 <br>
+            ServerboundPlayerActionPacket::ServerboundPlayerActionPacketを呼び出す際に<br>
+            第一引数に0x12000000を渡した場合、戻り値は何になるか答えなさい。<br>
+            <input id="yonmon" placeholder="解答例：0x10000000"><br><br><br>
+
+
+            【第5問】 <br>
+            CraftItemPacket::CraftItemPacketは、他のパケットと処理が異なり<br>
+            作成したパケットをそのまま送信するとフリーズします。<br>
+            では、作成したパケットをどのように編集すると使えるようになるか<br>
+            正しいものを次の5つの中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="5" cols="40">ア. 作成したパケットの+0x14に1を加算する
+イ. 作成したパケットの+0x14を+0x18に移動する
+ウ. 作成したパケットを適当なアドレスに保管する
+エ. 作成したパケットのUIDを変更する
+オ. 作成したパケットの+4を削除する
+	    </textarea><br>
+            <input id="gomon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第6問】 <br>
+            C++で0x10000000に0x12345678を書き込むプログラムの例として<br>
+            正しいものを次の5つの中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="5" cols="35">ア. (int)0x10000000,0x12345678;
+イ. *(int)0x10000000=0x12345678;
+ウ. **(int)0x10000000,0x12345678;
+エ. *(int)0x10000000,0x12345678;
+オ. *(int*)0x10000000=0x12345678;
+	    </textarea><br>
+            <input id="rokumon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第7問】 <br>
+            C++で[0x109CD8E4]+0x34を読み込むプログラムの例として<br>
+            正しいものを次の5つの中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="5" cols="35">ア. *(int)((*(int)0x109CD8E4)+0x34)
+イ. **(int)(0x109CD8E4+0x34);
+ウ. (*(int*(0x109CD8E4))+0x34);
+エ. *(int*)((*(int*)0x109CD8E4)+0x34);
+オ. *(int)((*(int)0x109CD8E4)+0x34);
+	    </textarea><br>
+            <input id="nanamon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第8問】 <br>
+            次のアセンブリプログラムを実行すると<br>
+            最終的にr3に入る値を答えなさい。<br>
+            <textarea class="asd" readonly rows="8" cols="15">.set t,0x10BC3000
+lis r12,t@l
+lis r3,0x1000
+sub r3,r12,r3
+li r12,2
+divw r3,r3,r12
+mulli r12,r3,5
+mr 3,r12
+	    </textarea><br>
+            <input id="hatimon" placeholder="解答例：0x10000000"><br><br><br>
+
+
+            【第9問】 <br>
+            弓を撃つコードを作成する際、二つのパケット関数を使用します。<br>
+            正しい組み合わせを次の5の中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="7" cols="33">ア. MovePacketとPlayerActionPacket
+イ. CraftItemPacketとMovePacket
+ウ. SetBowPacketとPlayerActionPacket
+エ. PlayerActionPacketとUseItemPacket
+オ. InteracrPacketとUseItemPacket
+	    </textarea><br>
+            <input id="kyuumon" placeholder="解答例：ア"><br><br><br>
+
+
+            【第10問】 <br>
+            攻撃したエンティティが保管されるポインターとして<br>
+            正しいものを次の5の中から記号で答えなさい。<br>
+            <textarea class="asd" readonly rows="5" cols="31">ア. [0x10A0A624]+0x9C
+イ. [0x109CD8E4]+0xC4
+ウ. [0x109CD8E4]+0xC0
+エ. [0x109CC528]+0x19C
+オ. [0x109CD8E4]+0x198
+	    </textarea><br>
+            <input id="juumon" placeholder="解答例：ア"><br><br><br><br>
+
+            <a id="btnc">[ 完了 ]</a><br><br>
+
+        </font>
+    </center>
+</body>
+</html>
+
+<script>
+    let sr = 0;
+
+    function butotnClick() {
+
+        let m1 = document.getElementById('itimon');
+        if (Number(m1.value) == 0x109CD8E4) {
+            sr++;
+        }
+
+        let m2 = document.getElementById('nimon');
+        if (m2.value == "ウ") {
+            sr++;
+        }
+
+        let m3 = document.getElementById('sanmon');
+        if (m3.value == "ア") {
+            sr++;
+        }
+
+        let m4 = document.getElementById('yonmon');
+        if (Number(m4.value) == 0x12000000) {
+            sr++;
+        }
+
+        let m5 = document.getElementById('gomon');
+        if (m5.value == "ウ") {
+            sr++;
+        }
+
+        let m6 = document.getElementById('rokumon');
+        if (m6.value == "オ") {
+            sr++;
+        }
+
+        let m7 = document.getElementById('nanamon');
+        if (m7.value == "エ") {
+            sr++;
+        }
+
+        let m8 = document.getElementById('hatimon');
+        if (Number(m8.value) == 0x50000000) {
+            sr++;
+        }
+
+        let m9 = document.getElementById('kyuumon');
+        if (m9.value == "エ") {
+            sr++;
+        }
+
+        let mA = document.getElementById('juumon');
+        if (mA.value == "ウ") {
+            sr++;
+        }
+
+        if (sr == 0) {
+            window.location.href = "0.html";
+        }
+
+        if (sr == 1) {
+            window.location.href = "2.html";
+        }
+
+        if (sr == 2) {
+            window.location.href = "2.html";
+        }
+
+        if (sr == 3) {
+            window.location.href = "5.html";
+        }
+
+        if (sr == 4) {
+            window.location.href = "5.html";
+        }
+
+        if (sr == 5) {
+            window.location.href = "5.html";
+        }
+
+        if (sr == 6) {
+            window.location.href = "9.html";
+        }
+
+        if (sr == 7) {
+            window.location.href = "9.html";
+        }
+
+        if (sr == 8) {
+            window.location.href = "9.html";
+        }
+
+        if (sr == 9) {
+            window.location.href = "9.html";
+        }
+
+        if (sr == 0xA) {
+            window.location.href = "A.html";
+        }
+
+    }
+
+    let button = document.getElementById('btnc');
+    button.onclick = butotnClick;
+</script>
